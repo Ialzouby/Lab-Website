@@ -1,6 +1,6 @@
 [
   {
-    "id": "pub1",
+    "id": "1",
     "year": 2025,
     "title": "GenHMR: Generative Human Mesh Recovery",
     "authors": "Muhammad Usama Saleem, Ekkasit Pinyoanuntapong, Pu Wang, Hongfei Xue, Srijan Das, Chen Chen",
@@ -10,7 +10,7 @@
     "type": "conference"
   },
   {
-    "id": "pub2",
+    "id": "2",
     "year": 2024,
     "title": "BAMM: Bidirectional Autoregressive Motion Model (ECCV 2024)",
     "authors": "Ekkasit Pinyoanuntapong°, Muhammad Usama Saleem°, Pu Wang°, Minwoo Lee°, Srijan Das°, Chen Chen†",
@@ -20,7 +20,7 @@
     "type": "conference"
   },
   {
-    "id": "pub3",
+    "id": "3",
     "year": 2024,
     "title": "ControlMM: Controllable Masked Motion Generation",
     "authors": "Ekkasit Pinyoanuntapong1, Muhammad Usama Saleem1, Korrawe Karunratanakul2, Pu Wang1, Hongfei Xue1, Chen Chen3, Chuan Guo4, Junli Cao4, Jian Ren4, Sergey Tulyakov4",
@@ -30,7 +30,7 @@
     "type": "conference"
   },
   {
-    "id": "pub4",
+    "id": "4",
     "year": 2023,
     "title": "MMM: Generative Masked Motion Model",
     "authors": "E. Pinyoanuntapong, P. Wang, M. Lee, C. Chen",
@@ -40,7 +40,7 @@
     "type": "conference"
   },
   {
-    "id": "pub5",
+    "id": "5",
     "year": 2023,
     "title": "Designing Acoustic Reconfigurable Intelligent Surface for Underwater Communications",
     "authors": "H. Wang, Z. Sun, H. Guo, P. Wang, I. Akyildiz",
@@ -50,7 +50,7 @@
     "type": "journal"
   },
   {
-    "id": "pub6",
+    "id": "6",
     "year": 2023,
     "title": "GaitSADA: Self-Aligned Domain Adaptation for mmWave Gait Recognition",
     "authors": "E. Pinyoanuntapong, A. Ali, K. Jakkala, P. Wang, M. Lee, Q. Peng, C. Chen, Z. Sun",
@@ -60,7 +60,7 @@
     "type": "conference"
   },
   {
-    "id": "pub7",
+    "id": "7",
     "year": 2023,
     "title": "DHA-FL: Enabling Efficient and Effective AIoT via Decentralized Hierarchical Asynchronous Federated Learning",
     "authors": "W. Huff, P. pinyoanuntapong, R. Balakrishnan, H. Feng, M. Lee, P. Wang, C. Chen",
@@ -70,7 +70,7 @@
     "type": "workshop"
   },
   {
-    "id": "pub8",
+    "id": "8",
     "year": 2023,
     "title": "GaitMixer: Skeleton-based Gait Representation Learning via Wide-spectrum Multi-axial Mixer",
     "authors": "E. Pinyoanuntapong, A. Ali, P. Wang, M. Lee, C. Chen",
@@ -80,7 +80,7 @@
     "type": "conference"
   },
   {
-    "id": "pub9",
+    "id": "9",
     "year": 2022,
     "title": "MutualNet: Adaptive ConvNet via Mutual Learning from Different Model Configurations",
     "authors": "T. Yang, S. Zhu, M. Mendieta, P. Wang, R. Balakrishnan, M. Lee, T. Han, M. Shah, C. Chen",
@@ -90,7 +90,7 @@
     "type": "journal"
   },
   {
-    "id": "pub10",
+    "id": "10",
     "year": 2022,
     "title": "EdgeML: Towards Network-Accelerated Federated Learning over Wireless Edge",
     "authors": "P. Pinyoanuntapong, P. Janakaraj, R. Balakrishnan, M. Lee, C. Chen, P. Wang",
@@ -100,7 +100,7 @@
     "type": "journal"
   },
   {
-    "id": "pub11",
+    "id": "11",
     "year": 2022,
     "title": "Towards Scalable and Robust AIoT via Decentralized Federated Learning",
     "authors": "P. Pinyoanuntapong, W. Huff, M. Lee, C. Chen, P. Wang",
@@ -110,7 +110,7 @@
     "type": "journal"
   },
   {
-    "id": "pub12",
+    "id": "12",
     "year": 2022,
     "title": "A Lightweight Graph Transformer Network for Human Mesh Reconstruction from 2D Human Pose",
     "authors": "C. Zheng, M. Mendieta, P. Wang, A. Lu, C. Chen",
@@ -120,7 +120,7 @@
     "type": "conference"
   },
   {
-    "id": "pub13",
+    "id": "13",
     "year": 2022,
     "title": "Local Learning Matters: Rethinking Data Heterogeneity in Federated Learning",
     "authors": "S. Gupta, Z. Sun, P. Wang, A. Bhuyan",
@@ -130,7 +130,7 @@
     "type": "conference"
   },
   {
-    "id": "pub14",
+    "id": "14",
     "year": 2022,
     "title": "PaWLA: PPG-based Weight Lifting Assessment",
     "authors": "A. Rahman, P. Wang, W. Wang, Y. Wang",
@@ -140,7 +140,7 @@
     "type": "conference"
   },
   {
-    "id": "pub15",
+    "id": "15",
     "year": 2022,
     "title": "PPGSign: Handwritten Signature Authentication using Wearable PPG Sensor",
     "authors": "A. Rahman, Y Cao, X Wei, P. Wang, F Li, Y Wang",
@@ -150,7 +150,7 @@
     "type": "conference"
   },
   {
-    "id": "pub16",
+    "id": "16",
     "year": 2021,
     "title": "Who is in Control? Practical Physical Layer Attack and Defense for mmWave based Sensing in Autonomous Vehicles",
     "authors": "Z. Sun, S. Balakrishnan, L. Su, A. Bhuyan, P. Wang, C. Qiao",
@@ -160,7 +160,7 @@
     "type": "journal"
   },
   {
-    "id": "pub17",
+    "id": "17",
     "year": 2021,
     "title": "Joint Design of Communication, Wireless Energy Transfer, and Control for Swarm Autonomous Underwater Vehicles",
     "authors": "H. Guo, Z. Sun, P. Wang",
@@ -170,7 +170,7 @@
     "type": "journal"
   },
   {
-    "id": "pub18",
+    "id": "18",
     "year": 2021,
     "title": "Acoustic Intelligent Surface System for Reliable and Efficient Underwater Communications",
     "authors": "Z. Sun, H. Guo, P. Wang, I.F. Akyildiz",
@@ -180,7 +180,7 @@
     "type": "conference"
   },
   {
-    "id": "pub19",
+    "id": "19",
     "year": 2021,
     "title": "Sim-to-Real Transfer in Multi-agent Reinforcement Networking for Federated Edge Computing",
     "authors": "P. Pinyoanuntapong, T. Pothuneedi, R. Balakrishnan, M. Lee, C. Chen, P. Wang",

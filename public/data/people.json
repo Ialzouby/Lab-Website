@@ -1,6 +1,6 @@
 [
   {
-    "id": "pi1",
+    "id": "1",
     "name": "Dr. Pu Wang",
     "role": "PI",
     "topic": "Computer Vision, Machine Learning, Wireless Communications",
@@ -10,7 +10,7 @@
     "status": "active"
   },
   {
-    "id": "phd1",
+    "id": "2",
     "name": "Prabhu Kaliamoorthi",
     "role": "PhD Student",
     "topic": "Computer Vision and Machine Learning",
@@ -20,27 +20,27 @@
     "status": "active"
   },
   {
-    "id": "phd2",
+    "id": "3",
     "name": "Akarsh Pokkunuru",
     "role": "PhD Student",
-    "topic": "Wireless Networks and IoT",
+    "topic": "Wireless Communications",
     "email": "",
     "image": "/assets/images/akarsh.jpg",
     "notes": "PhD Student",
     "status": "active"
   },
   {
-    "id": "phd3",
+    "id": "4",
     "name": "Ahmad Wisam Mustapha",
     "role": "PhD Student",
-    "topic": "Machine Learning and Signal Processing",
+    "topic": "Machine Learning",
     "email": "",
     "image": "/assets/images/ahmad.jpg",
     "notes": "PhD Student",
     "status": "active"
   },
   {
-    "id": "phd4",
+    "id": "5",
     "name": "Ekkasit Pinyoanuntapong",
     "role": "PhD Student",
     "topic": "Computer Vision and Human Motion Analysis",
@@ -50,27 +50,27 @@
     "status": "active"
   },
   {
-    "id": "phd5",
+    "id": "6",
     "name": "Yagna Patel",
     "role": "PhD Student",
-    "topic": "Federated Learning and Edge Computing",
+    "topic": "Federated Learning",
     "email": "",
     "image": "/assets/images/yagna.jpg",
     "notes": "PhD Student",
     "status": "active"
   },
   {
-    "id": "phd6",
+    "id": "7",
     "name": "Kalvik Jakkala",
     "role": "PhD Student",
-    "topic": "mmWave Communications and Sensing",
+    "topic": "mmWave Communications",
     "email": "",
     "image": "/assets/images/kalvik.jpg",
     "notes": "PhD Student",
     "status": "active"
   },
   {
-    "id": "ms1",
+    "id": "8",
     "name": "Austin Hester",
     "role": "MS Student",
     "topic": "Machine Learning Applications",
@@ -80,7 +80,7 @@
     "status": "active"
   },
   {
-    "id": "ms2",
+    "id": "9",
     "name": "Varun Chopra",
     "role": "MS Student",
     "topic": "Computer Vision",
@@ -90,100 +90,100 @@
     "status": "active"
   },
   {
-    "id": "ms3",
+    "id": "10",
     "name": "Assad Ali",
     "role": "MS Student",
-    "topic": "Wireless Communications",
+    "topic": "Wireless Networks",
     "email": "",
     "image": "/assets/images/assad.jpg",
     "notes": "MS Student",
     "status": "active"
   },
   {
-    "id": "ms4",
+    "id": "11",
     "name": "Fahad Alrasheed",
     "role": "MS Student",
-    "topic": "Network Security",
+    "topic": "Edge Computing",
     "email": "",
     "image": "/assets/images/fahad.jpg",
     "notes": "MS Student",
     "status": "active"
   },
   {
-    "id": "ms5",
+    "id": "12",
     "name": "Samuel Twumasi",
     "role": "MS Student",
-    "topic": "IoT and Edge Computing",
+    "topic": "IoT Systems",
     "email": "",
     "image": "/assets/images/samuel.jpg",
     "notes": "MS Student",
     "status": "active"
   },
   {
-    "id": "alumni1",
+    "id": "13",
     "name": "Abignan Kesavan",
     "role": "Alumni",
-    "topic": "Former PhD Student",
+    "topic": "Computer Vision",
     "email": "",
     "image": "/assets/images/abignan.jpg",
     "notes": "Former PhD Student",
     "status": "alumni"
   },
   {
-    "id": "alumni2",
+    "id": "14",
     "name": "Ayman Rahman",
     "role": "Alumni",
-    "topic": "Former MS Student",
+    "topic": "Wearable Computing",
     "email": "",
     "image": "/assets/images/ayman.jpg",
     "notes": "Former MS Student",
     "status": "alumni"
   },
   {
-    "id": "alumni3",
+    "id": "15",
     "name": "Avinash Bhat",
     "role": "Alumni",
-    "topic": "Former MS Student",
+    "topic": "Machine Learning",
     "email": "",
     "image": "/assets/images/avinash.jpg",
     "notes": "Former MS Student",
     "status": "alumni"
   },
   {
-    "id": "alumni4",
+    "id": "16",
     "name": "Sultan Alshamrani",
     "role": "Alumni",
-    "topic": "Former PhD Student",
+    "topic": "Wireless Communications",
     "email": "",
     "image": "/assets/images/sultan.jpg",
     "notes": "Former PhD Student",
     "status": "alumni"
   },
   {
-    "id": "alumni5",
+    "id": "17",
     "name": "Vijaya Yajnanarayana",
     "role": "Alumni",
-    "topic": "Former Postdoc",
+    "topic": "Network Optimization",
     "email": "",
     "image": "/assets/images/vijaya.jpg",
     "notes": "Former Postdoc",
     "status": "alumni"
   },
   {
-    "id": "alumni6",
+    "id": "18",
     "name": "Arun Singh",
     "role": "Alumni",
-    "topic": "Former PhD Student",
+    "topic": "Wireless Networks",
     "email": "",
     "image": "/assets/images/Arunsingh.jpg",
     "notes": "Former PhD Student",
     "status": "alumni"
   },
   {
-    "id": "alumni7",
+    "id": "19",
     "name": "Bezabih Molla",
     "role": "Alumni",
-    "topic": "Former PhD Student",
+    "topic": "Network Security",
     "email": "",
     "image": "/assets/images/bezabih.jpg",
     "notes": "Former PhD Student",

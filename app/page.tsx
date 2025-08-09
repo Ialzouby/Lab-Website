@@ -9,45 +9,27 @@ interface NewsItem {
   content: string
 }
 
-interface Publication {
-  id: string
-  year: number
-  title: string
-  authors: string
-  venue: string
-  image: string
-  link: string
-  type: string
-}
-
-export default function HomePage() {
+export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([])
-  const [recentPublications, setRecentPublications] = useState<Publication[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const loadData = async () => {
+    const loadNews = async () => {
       try {
-        // Load news data
-        const newsResponse = await fetch("/data/news.json")
-        const newsData = newsResponse.ok ? await newsResponse.json() : []
-
-        // Load publications data
-        const pubResponse = await fetch("/data/publications.json")
-        const pubData = pubResponse.ok ? await pubResponse.json() : []
-
-        setNews(Array.isArray(newsData) ? newsData.slice(0, 5) : [])
-        setRecentPublications(Array.isArray(pubData) ? pubData.slice(0, 3) : [])
+        const response = await fetch("/data/news.json")
+        if (response.ok) {
+          const data = await response.json()
+          setNews(Array.isArray(data) ? data : [])
+        }
       } catch (error) {
-        console.error("Error loading data:", error)
+        console.error("Error loading news:", error)
         setNews([])
-        setRecentPublications([])
       } finally {
         setLoading(false)
       }
     }
 
-    loadData()
+    loadNews()
   }, [])
 
   return (
@@ -137,7 +119,20 @@ export default function HomePage() {
                     </li>
                   ))
                 ) : (
-                  <li>No news items available</li>
+                  <>
+                    <li>Best student paper runner-up, IEEE SCC, San Francisco</li>
+                    <li>John A. See Innovation Award</li>
+                    <li>TPC Highest Ranked Paper of IEEE DySPAN, IEEE Communication Society, Germany</li>
+                    <li>
+                      BWN Lab Researcher of the Year Award, for his outstanding research achievements throughout the
+                      year.
+                    </li>
+                    <li>
+                      Fellow of the School of Graduate Studies in recognition of his outstanding academic achievement
+                      throughout a graduate programme, Memorial University of Newfoundland, 2008
+                    </li>
+                    <li>IEEE Travel Grant for 2007 International Conference on Communications</li>
+                  </>
                 )}
               </ul>
             )}
