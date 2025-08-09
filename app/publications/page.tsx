@@ -1,280 +1,152 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Sidebar from "@/components/Sidebar"
 
 interface Publication {
-  id: string
-  year: number
   title: string
   authors: string
   venue: string
   image: string
   link: string
-  type: string
 }
 
 export default function Publications() {
-  const [publications, setPublications] = useState<Publication[]>([])
-  const [loading, setLoading] = useState(true)
-  const [collapsedSections, setCollapsedSections] = useState<{ [key: string]: boolean }>({})
+  const [collapsedYears, setCollapsedYears] = useState<{ [key: string]: boolean }>({})
 
-  useEffect(() => {
-    const loadPublications = async () => {
-      try {
-        const response = await fetch("/data/publications.json")
-        if (response.ok) {
-          const data = await response.json()
-          setPublications(Array.isArray(data) ? data : [])
-        } else {
-          // Fallback to hardcoded data if JSON doesn't exist
-          setPublications([
-            {
-              id: "1",
-              year: 2025,
-              title: "GenHMR: Generative Human Mesh Recovery",
-              authors: "Muhammad Usama Saleem, Ekkasit Pinyoanuntapong, Pu Wang, Hongfei Xue, Srijan Das, Chen Chen",
-              venue: "The Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI '25), 2025",
-              image: "/assets/images/GenHMR.gif",
-              link: "https://arxiv.org/abs/2412.14444",
-              type: "conference",
-            },
-            {
-              id: "2",
-              year: 2024,
-              title: "BAMM: Bidirectional Autoregressive Motion Model (ECCV 2024)",
-              authors:
-                "Ekkasit Pinyoanuntapong°, Muhammad Usama Saleem°, Pu Wang°, Minwoo Lee°, Srijan Das°, Chen Chen†",
-              venue: "°University of North Carolina at Charlotte, †University of Central Florida",
-              image: "/assets/images/bamm.gif",
-              link: "https://exitudio.github.io/BAMM-page/",
-              type: "conference",
-            },
-            {
-              id: "3",
-              year: 2024,
-              title: "ControlMM: Controllable Masked Motion Generation",
-              authors:
-                "Ekkasit Pinyoanuntapong1, Muhammad Usama Saleem1, Korrawe Karunratanakul2, Pu Wang1, Hongfei Xue1, Chen Chen3, Chuan Guo4, Junli Cao4, Jian Ren4, Sergey Tulyakov4",
-              venue:
-                "1University of North Carolina at Charlotte, 2ETH Zurich, 3University of Central Florida, 4Snap Inc.",
-              image: "/assets/images/contrlmm.gif",
-              link: "https://exitudio.github.io/ControlMM-page/",
-              type: "conference",
-            },
-            {
-              id: "4",
-              year: 2023,
-              title: "MMM: Generative Masked Motion Model",
-              authors: "E. Pinyoanuntapong, P. Wang, M. Lee, C. Chen",
-              venue: "Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023",
-              image: "/assets/images/mmm.gif",
-              link: "https://arxiv.org/pdf/2312.03596",
-              type: "conference",
-            },
-            {
-              id: "5",
-              year: 2023,
-              title: "Designing Acoustic Reconfigurable Intelligent Surface for Underwater Communications",
-              authors: "H. Wang, Z. Sun, H. Guo, P. Wang, I. Akyildiz",
-              venue: "IEEE Transactions on Wireless Communications, to appear, 2023",
-              image:
-                "/assets/images/Designing Acoustic Reconfigurable Intelligent Surface for Underwater Communications .gif",
-              link: "#",
-              type: "journal",
-            },
-            {
-              id: "6",
-              year: 2023,
-              title: "GaitSADA: Self-Aligned Domain Adaptation for mmWave Gait Recognition",
-              authors: "E. Pinyoanuntapong, A. Ali, K. Jakkala, P. Wang, M. Lee, Q. Peng, C. Chen, Z. Sun",
-              venue: "Proc. IEEE 20th International Conference on Mobile Ad Hoc and Smart Systems (MASS), 2023",
-              image: "/assets/images/gaitsada.png",
-              link: "https://arxiv.org/pdf/2301.13384",
-              type: "conference",
-            },
-            {
-              id: "7",
-              year: 2023,
-              title:
-                "DHA-FL: Enabling Efficient and Effective AIoT via Decentralized Hierarchical Asynchronous Federated Learning",
-              authors: "W. Huff, P. pinyoanuntapong, R. Balakrishnan, H. Feng, M. Lee, P. Wang, C. Chen",
-              venue: "Proc. MLSys 2023 Workshop on Resource-Constrained Learning in Wireless Networks, 2023",
-              image: "/assets/images/dha-fl.png",
-              link: "https://openreview.net/pdf?id=bSpvqVACDmQ",
-              type: "workshop",
-            },
-            {
-              id: "8",
-              year: 2023,
-              title: "GaitMixer: Skeleton-based Gait Representation Learning via Wide-spectrum Multi-axial Mixer",
-              authors: "E. Pinyoanuntapong, A. Ali, P. Wang, M. Lee, C. Chen",
-              venue: "Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023",
-              image: "/assets/images/gaitmixer.png",
-              link: "https://arxiv.org/pdf/2210.15491",
-              type: "conference",
-            },
-            {
-              id: "9",
-              year: 2022,
-              title: "MutualNet: Adaptive ConvNet via Mutual Learning from Different Model Configurations",
-              authors: "T. Yang, S. Zhu, M. Mendieta, P. Wang, R. Balakrishnan, M. Lee, T. Han, M. Shah, C. Chen",
-              venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2022",
-              image:
-                "/assets/images/MutualNet: Adaptive ConvNet via Mutual Learning from Different Model Configurations.png",
-              link: "https://arxiv.org/abs/2105.07085",
-              type: "journal",
-            },
-            {
-              id: "10",
-              year: 2022,
-              title: "EdgeML: Towards Network-Accelerated Federated Learning over Wireless Edge",
-              authors: "P. Pinyoanuntapong, P. Janakaraj, R. Balakrishnan, M. Lee, C. Chen, P. Wang",
-              venue: "Computer Networks, 2022",
-              image: "/assets/images/Publication-3.png",
-              link: "#",
-              type: "journal",
-            },
-            {
-              id: "11",
-              year: 2022,
-              title: "Towards Scalable and Robust AIoT via Decentralized Federated Learning",
-              authors: "P. Pinyoanuntapong, W. Huff, M. Lee, C. Chen, P. Wang",
-              venue: "IEEE Internet of Things Magazine, 2022",
-              image: "/assets/images/Publication-4.gif",
-              link: "#",
-              type: "journal",
-            },
-            {
-              id: "12",
-              year: 2022,
-              title: "A Lightweight Graph Transformer Network for Human Mesh Reconstruction from 2D Human Pose",
-              authors: "C. Zheng, M. Mendieta, P. Wang, A. Lu, C. Chen",
-              venue: "Proc. ACM Multimedia (ACM MM), 2022",
-              image: "/assets/images/lightweight.png",
-              link: "https://arxiv.org/pdf/2111.12696",
-              type: "conference",
-            },
-            {
-              id: "13",
-              year: 2022,
-              title: "Local Learning Matters: Rethinking Data Heterogeneity in Federated Learning",
-              authors: "S. Gupta, Z. Sun, P. Wang, A. Bhuyan",
-              venue: "Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022",
-              image: "/assets/images/local.png",
-              link: "https://arxiv.org/pdf/2111.14213",
-              type: "conference",
-            },
-            {
-              id: "14",
-              year: 2022,
-              title: "PaWLA: PPG-based Weight Lifting Assessment",
-              authors: "A. Rahman, P. Wang, W. Wang, Y. Wang",
-              venue: "Proc. IEEE International Performance, Computing, and Communications Conference (IPCCC), 2022",
-              image: "/assets/images/PaWLA.gif",
-              link: "https://ieeexplore.ieee.org/document/9894324",
-              type: "conference",
-            },
-            {
-              id: "15",
-              year: 2022,
-              title: "PPGSign: Handwritten Signature Authentication using Wearable PPG Sensor",
-              authors: "A. Rahman, Y Cao, X Wei, P. Wang, F Li, Y Wang",
-              venue: "Proc. IEEE Wireless Communications and Networking Conference (WCNC), 2022",
-              image: "/assets/images/ppgsign.gif",
-              link: "https://ieeexplore.ieee.org/abstract/document/9771813",
-              type: "conference",
-            },
-            {
-              id: "16",
-              year: 2021,
-              title:
-                "Who is in Control? Practical Physical Layer Attack and Defense for mmWave based Sensing in Autonomous Vehicles",
-              authors: "Z. Sun, S. Balakrishnan, L. Su, A. Bhuyan, P. Wang, C. Qiao",
-              venue: "IEEE Transactions on Information Forensics and Security, Vol.16, pp.3199-3214, April 2021",
-              image: "/assets/images/Publication-1.gif",
-              link: "#",
-              type: "journal",
-            },
-            {
-              id: "17",
-              year: 2021,
-              title:
-                "Joint Design of Communication, Wireless Energy Transfer, and Control for Swarm Autonomous Underwater Vehicles",
-              authors: "H. Guo, Z. Sun, P. Wang",
-              venue: "IEEE Transactions on Vehicular Technology, Vol.70, No.2, pp.1821-1835, February 2021",
-              image: "/assets/images/Publication-2.gif",
-              link: "#",
-              type: "journal",
-            },
-            {
-              id: "18",
-              year: 2021,
-              title: "Acoustic Intelligent Surface System for Reliable and Efficient Underwater Communications",
-              authors: "Z. Sun, H. Guo, P. Wang, I.F. Akyildiz",
-              venue: "Proc. Int. ACM Conference on Underwater Networks and Systems (WUWNET 21), 2021",
-              image: "/assets/images/acoustic.png",
-              link: "https://dl.acm.org/doi/pdf/10.1145/3491315.3491324",
-              type: "conference",
-            },
-            {
-              id: "19",
-              year: 2021,
-              title: "Sim-to-Real Transfer in Multi-agent Reinforcement Networking for Federated Edge Computing",
-              authors: "P. Pinyoanuntapong, T. Pothuneedi, R. Balakrishnan, M. Lee, C. Chen, P. Wang",
-              venue: "Proc. ACM/IEEE 6th Symposium on Edge Computing (SEC), 2021",
-              image: "/assets/images/sim.gif",
-              link: "https://ieeexplore.ieee.org/document/9708919",
-              type: "conference",
-            },
-          ])
-        }
-      } catch (error) {
-        console.error("Error loading publications:", error)
-        setPublications([])
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadPublications()
-  }, [])
-
-  const toggleSection = (year: string) => {
-    setCollapsedSections((prev) => ({
+  const toggleYear = (year: string) => {
+    setCollapsedYears((prev) => ({
       ...prev,
       [year]: !prev[year],
     }))
   }
 
-  // Group publications by year
-  const groupedPublications = publications.reduce(
-    (acc, pub) => {
-      const year = pub.year.toString()
-      if (!acc[year]) {
-        acc[year] = []
-      }
-      acc[year].push(pub)
-      return acc
-    },
-    {} as { [key: string]: Publication[] },
-  )
-
-  // Sort years in descending order
-  const sortedYears = Object.keys(groupedPublications).sort((a, b) => Number.parseInt(b) - Number.parseInt(a))
-
-  if (loading) {
-    return (
-      <div className="legacy-content">
-        <div className="container">
-          <Sidebar />
-          <main className="content">
-            <h1 className="section-title">Publications</h1>
-            <p>Loading publications...</p>
-          </main>
-        </div>
-      </div>
-    )
+  const publications = {
+    "2025": [
+      {
+        title: "GenHMR: Generative Human Mesh Recovery",
+        authors: "Muhammad Usama Saleem, Ekkasit Pinyoanuntapong, Pu Wang, Hongfei Xue, Srijan Das, Chen Chen",
+        venue: "The Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI '25), 2025",
+        image: "/placeholder.svg?height=100&width=150&text=GenHMR",
+        link: "https://arxiv.org/abs/2412.14444",
+      },
+    ],
+    "2024": [
+      {
+        title: "BAMM: Bidirectional Autoregressive Motion Model (ECCV 2024)",
+        authors: "Ekkasit Pinyoanuntapong, Muhammad Usama Saleem, Pu Wang, Minwoo Lee, Srijan Das, Chen Chen",
+        venue: "European Conference on Computer Vision (ECCV), 2024",
+        image: "/placeholder.svg?height=100&width=150&text=BAMM",
+        link: "https://exitudio.github.io/BAMM-page/",
+      },
+      {
+        title: "ControlMM: Controllable Masked Motion Generation",
+        authors:
+          "Ekkasit Pinyoanuntapong, Muhammad Usama Saleem, Korrawe Karunratanakul, Pu Wang, Hongfei Xue, Chen Chen",
+        venue: "Computer Vision and Pattern Recognition (CVPR), 2024",
+        image: "/placeholder.svg?height=100&width=150&text=ControlMM",
+        link: "https://exitudio.github.io/ControlMM-page/",
+      },
+    ],
+    "2023": [
+      {
+        title: "MMM: Generative Masked Motion Model",
+        authors: "E. Pinyoanuntapong, P. Wang, M. Lee, C. Chen",
+        venue: "Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023",
+        image: "/placeholder.svg?height=100&width=150&text=MMM",
+        link: "https://arxiv.org/pdf/2312.03596",
+      },
+      {
+        title: "GaitSADA: Self-Aligned Domain Adaptation for mmWave Gait Recognition",
+        authors: "E. Pinyoanuntapong, A. Ali, K. Jakkala, P. Wang, M. Lee, Q. Peng, C. Chen, Z. Sun",
+        venue: "Proc. IEEE 20th International Conference on Mobile Ad Hoc and Smart Systems (MASS), 2023",
+        image: "/placeholder.svg?height=100&width=150&text=GaitSADA",
+        link: "https://arxiv.org/pdf/2301.13384",
+      },
+    ],
+    "2022": [
+      {
+        title: "MutualNet: Adaptive ConvNet via Mutual Learning from Different Model Configurations",
+        authors: "T. Yang, S. Zhu, M. Mendieta, P. Wang, R. Balakrishnan, M. Lee, T. Han, M. Shah, C. Chen",
+        venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2022",
+        image: "/assets/images/MutualNet: Adaptive ConvNet via Mutual Learning from Different Model Configurations.png",
+        link: "https://arxiv.org/abs/2105.07085",
+      },
+      {
+        title: "EdgeML: Towards Network-Accelerated Federated Learning over Wireless Edge",
+        authors: "P. Pinyoanuntapong, P. Janakaraj, R. Balakrishnan, M. Lee, C. Chen, P. Wang",
+        venue: "Computer Networks, 2022",
+        image: "/assets/images/Publication-3.png",
+        link: "#",
+      },
+      {
+        title: "Towards Scalable and Robust AIoT via Decentralized Federated Learning",
+        authors: "P. Pinyoanuntapong, W. Huff, M. Lee, C. Chen, P. Wang",
+        venue: "IEEE Internet of Things Magazine, 2022",
+        image: "/assets/images/Publication-4.gif",
+        link: "#",
+      },
+      {
+        title: "A Lightweight Graph Transformer Network for Human Mesh Reconstruction from 2D Human Pose",
+        authors: "C. Zheng, M. Mendieta, P. Wang, A. Lu, C. Chen",
+        venue: "Proc. ACM Multimedia (ACM MM), 2022",
+        image: "/assets/images/lightweight.png",
+        link: "https://arxiv.org/pdf/2111.12696",
+      },
+      {
+        title: "Local Learning Matters: Rethinking Data Heterogeneity in Federated Learning",
+        authors: "S. Gupta, Z. Sun, P. Wang, A. Bhuyan",
+        venue: "Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022",
+        image: "/assets/images/local.png",
+        link: "https://arxiv.org/pdf/2111.14213",
+      },
+      {
+        title: "PaWLA: PPG-based Weight Lifting Assessment",
+        authors: "A. Rahman, P. Wang, W. Wang, Y. Wang",
+        venue: "Proc. IEEE International Performance, Computing, and Communications Conference (IPCCC), 2022",
+        image: "/assets/images/PaWLA.gif",
+        link: "https://ieeexplore.ieee.org/document/9894324",
+      },
+      {
+        title: "PPGSign: Handwritten Signature Authentication using Wearable PPG Sensor",
+        authors: "A. Rahman, Y Cao, X Wei, P. Wang, F Li, Y Wang",
+        venue: "Proc. IEEE Wireless Communications and Networking Conference (WCNC), 2022",
+        image: "/assets/images/ppgsign.gif",
+        link: "https://ieeexplore.ieee.org/abstract/document/9771813",
+      },
+    ],
+    "2021": [
+      {
+        title:
+          "Who is in Control? Practical Physical Layer Attack and Defense for mmWave based Sensing in Autonomous Vehicles",
+        authors: "Z. Sun, S. Balakrishnan, L. Su, A. Bhuyan, P. Wang, C. Qiao",
+        venue: "IEEE Transactions on Information Forensics and Security, Vol.16, pp.3199-3214, April 2021",
+        image: "/assets/images/Publication-1.gif",
+        link: "#",
+      },
+      {
+        title:
+          "Joint Design of Communication, Wireless Energy Transfer, and Control for Swarm Autonomous Underwater Vehicles",
+        authors: "H. Guo, Z. Sun, P. Wang",
+        venue: "IEEE Transactions on Vehicular Technology, Vol.70, No.2, pp.1821-1835, February 2021",
+        image: "/assets/images/Publication-2.gif",
+        link: "#",
+      },
+      {
+        title: "Acoustic Intelligent Surface System for Reliable and Efficient Underwater Communications",
+        authors: "Z. Sun, H. Guo, P. Wang, I.F. Akyildiz",
+        venue: "Proc. Int. ACM Conference on Underwater Networks and Systems (WUWNET 21), 2021",
+        image: "/assets/images/acoustic.png",
+        link: "https://dl.acm.org/doi/pdf/10.1145/3491315.3491324",
+      },
+      {
+        title: "Sim-to-Real Transfer in Multi-agent Reinforcement Networking for Federated Edge Computing",
+        authors: "P. Pinyoanuntapong, T. Pothuneedi, R. Balakrishnan, M. Lee, C. Chen, P. Wang",
+        venue: "Proc. ACM/IEEE 6th Symposium on Edge Computing (SEC), 2021",
+        image: "/assets/images/sim.gif",
+        link: "https://ieeexplore.ieee.org/document/9708919",
+      },
+    ],
   }
 
   return (
@@ -282,45 +154,48 @@ export default function Publications() {
       <div className="container">
         <Sidebar />
         <main className="content">
-          <div className="publications-section">
-            <h1 className="section-title">Publications</h1>
-            <p className="copyright">
-              <strong>DISCLAIMER:</strong> Readers may view, browse, and/or download any material in this website for
-              temporary use only, provided that this is used for noncommercial personal purposes only. Except as
-              provided by law, this material may not be further reproduced, distributed, transmitted, modified, adapted,
-              performed, displayed, published, or sold in whole or part, without prior written permission from the
-              publisher and the web site owner.
-            </p>
+          <h1 className="section-title">Publications</h1>
 
-            {sortedYears.map((year) => (
-              <div key={year}>
-                <div className="section-header">
-                  <h2 className="collapsible-header" onClick={() => toggleSection(year)}>
-                    {year} <span className="toggle-indicator">{collapsedSections[year] ? "+" : "-"}</span>
-                  </h2>
-                </div>
-                <div className={`collapsible-content ${collapsedSections[year] ? "collapsed" : ""}`}>
-                  {groupedPublications[year].map((pub) => (
-                    <div key={pub.id} className="publication">
-                      <img src={pub.image || "/placeholder.svg"} alt={pub.title} className="publication-image" />
-                      <div className="publication-details">
-                        <h3>{pub.title}</h3>
-                        <p>{pub.authors}</p>
-                        <p>
-                          <em>{pub.venue}</em>
-                        </p>
-                        {pub.link && pub.link !== "#" && (
-                          <a href={pub.link} target="_blank" className="link" rel="noreferrer">
-                            Link
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div
+            style={{
+              backgroundColor: "#fff3cd",
+              border: "1px solid #ffeaa7",
+              padding: "15px",
+              borderRadius: "5px",
+              marginBottom: "30px",
+            }}
+          >
+            <strong>DISCLAIMER:</strong> Readers may view, browse, and/or download any material in this website for
+            temporary use only, provided that this is used for noncommercial personal purposes only.
           </div>
+
+          {Object.entries(publications).map(([year, pubs]) => (
+            <div key={year} className="year-section">
+              <button className="year-header" onClick={() => toggleYear(year)}>
+                <span>{year}</span>
+                <span>{collapsedYears[year] ? "+" : "-"}</span>
+              </button>
+              <div className={`year-content ${collapsedYears[year] ? "collapsed" : ""}`}>
+                {pubs.map((pub, index) => (
+                  <div key={index} className="publication">
+                    <img src={pub.image || "/placeholder.svg"} alt={pub.title} className="publication-image" />
+                    <div className="publication-details">
+                      <h3>{pub.title}</h3>
+                      <p>{pub.authors}</p>
+                      <p>
+                        <em>{pub.venue}</em>
+                      </p>
+                      {pub.link && pub.link !== "#" && (
+                        <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                          Link
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </main>
       </div>
     </div>

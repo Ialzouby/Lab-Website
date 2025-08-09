@@ -19,60 +19,50 @@ export default function Research() {
       <div className="container">
         <Sidebar />
         <main className="content">
-          <header className="header">
-            <h1>Research Projects</h1>
-          </header>
+          <h1 className="section-title">Research Projects</h1>
 
-          <div className="card" onClick={() => openModalHandler("modal1")}>
+          <div className="highlight" onClick={() => openModalHandler("modal1")}>
             <h2>AI for Next-generation Self-driving Networking</h2>
             <p>
               Software defined networking (SDN) has been widely envisioned to be the next-generation networking paradigm
-              for both wired and wireless networks...
-            </p>
-            <p>
-              Recently, my research focuses on developing AI-oriented SDN architecture for next-generation self-driving
-              networks <strong>(Click for more)</strong>
+              for both wired and wireless networks. Recently, my research focuses on developing AI-oriented SDN
+              architecture for next-generation self-driving networks.
             </p>
             <p>
               <strong>With the Support of National Science Foundation.</strong>
             </p>
           </div>
 
-          <div className="card" onClick={() => openModalHandler("modal2")}>
+          <div className="highlight" onClick={() => openModalHandler("modal2")}>
             <h2>Distributed and Federated Deep Learning</h2>
             <p>
               Federated learning (FL) has emerged as a key technology for enabling next-generation privacy-preserving AI
-              at-scale...
-            </p>
-            <p>
-              The overall objective of this project is to develop a novel wireless multi-hop FL system{" "}
-              <strong>(Click for more)</strong>
+              at-scale. The overall objective of this project is to develop a novel wireless multi-hop FL system with
+              guaranteed stability, high accuracy, and fast convergence speed.
             </p>
             <p>
               <strong>With the Support of National Science Foundation.</strong>
             </p>
           </div>
 
-          <div className="card" onClick={() => openModalHandler("modal3")}>
+          <div className="highlight" onClick={() => openModalHandler("modal3")}>
             <h2>AI-enabled Human Digitalization and Applications</h2>
             <p>
               Recovering 3D human models from monocular images/videos has drawn more attention in recent years due to
-              vast practical applications <strong>(Click for more)</strong>
+              vast practical applications that require 3D human modeling, such as gaming, human-computer interaction,
+              and virtual systems.
             </p>
             <p>
               <strong>With the Support of National Science Foundation.</strong>
             </p>
           </div>
 
-          <div className="card" onClick={() => openModalHandler("modal4")}>
+          <div className="highlight" onClick={() => openModalHandler("modal4")}>
             <h2>Deep Learning for Smart and Secure Wireless Sensing</h2>
             <p>
               Millimeter wave (mmWave) communication is considered to be one of the key enabling technologies of next
-              generation very high throughput wireless networks
-            </p>
-            <p>
-              Our objective is to achieve simultaneous tracking, action recognition, pose estimation and user
-              identification at-scale <strong>(Click for more)</strong>
+              generation very high throughput wireless networks. Our objective is to achieve simultaneous tracking,
+              action recognition, pose estimation and user identification at-scale.
             </p>
             <p>
               <strong>With the Support of Department of Energy and National Science Foundation.</strong>

@@ -231,6 +231,72 @@ export default function Group() {
     loadPeople()
   }, [])
 
+  const pi = {
+    name: "Dr. Pu Wang",
+    role: "Principal Investigator",
+    image: "/placeholder.svg?height=250&width=200&text=Dr. Wang",
+    email: "pu.wang@uncc.edu",
+  }
+
+  const phdStudents = [
+    {
+      name: "Prabhu Kaliamoorthi",
+      topic: "Computer Vision and Machine Learning",
+      image: "/placeholder.svg?height=120&width=120&text=Prabhu",
+    },
+    {
+      name: "Akarsh Pokkunuru",
+      topic: "Wireless Communications",
+      image: "/placeholder.svg?height=120&width=120&text=Akarsh",
+    },
+    {
+      name: "Ahmad Wisam Mustapha",
+      topic: "Machine Learning",
+      image: "/placeholder.svg?height=120&width=120&text=Ahmad",
+    },
+    {
+      name: "Ekkasit Pinyoanuntapong",
+      topic: "Computer Vision",
+      image: "/placeholder.svg?height=120&width=120&text=Ekkasit",
+    },
+    { name: "Yagna Patel", topic: "Federated Learning", image: "/placeholder.svg?height=120&width=120&text=Yagna" },
+    {
+      name: "Kalvik Jakkala",
+      topic: "mmWave Communications",
+      image: "/placeholder.svg?height=120&width=120&text=Kalvik",
+    },
+  ]
+
+  const msStudents = [
+    {
+      name: "Austin Hester",
+      topic: "Machine Learning Applications",
+      image: "/placeholder.svg?height=120&width=120&text=Austin",
+    },
+    { name: "Varun Chopra", topic: "Computer Vision", image: "/placeholder.svg?height=120&width=120&text=Varun" },
+    { name: "Assad Ali", topic: "Wireless Networks", image: "/placeholder.svg?height=120&width=120&text=Assad" },
+    { name: "Fahad Alrasheed", topic: "Edge Computing", image: "/placeholder.svg?height=120&width=120&text=Fahad" },
+  ]
+
+  const alumni = [
+    {
+      name: "Abignan Kesavan",
+      topic: "Former PhD Student",
+      image: "/placeholder.svg?height=120&width=120&text=Abignan",
+    },
+    { name: "Ayman Rahman", topic: "Former MS Student", image: "/placeholder.svg?height=120&width=120&text=Ayman" },
+    {
+      name: "Sultan Alshamrani",
+      topic: "Former PhD Student",
+      image: "/placeholder.svg?height=120&width=120&text=Sultan",
+    },
+    {
+      name: "Vijaya Yajnanarayana",
+      topic: "Former Postdoc",
+      image: "/placeholder.svg?height=120&width=120&text=Vijaya",
+    },
+  ]
+
   if (loading) {
     return (
       <div className="legacy-content">
@@ -245,12 +311,6 @@ export default function Group() {
     )
   }
 
-  // Separate PI from other members
-  const pi = people.find((person) => person.role === "PI")
-  const phdStudents = people.filter((person) => person.role === "PhD Student")
-  const msStudents = people.filter((person) => person.role === "MS Student")
-  const alumni = people.filter((person) => person.status === "alumni")
-
   return (
     <div className="legacy-content">
       <div className="container">
@@ -258,63 +318,58 @@ export default function Group() {
         <main className="content">
           <h1 className="group-title">Research Group</h1>
 
-          {pi && (
-            <section className="principal-investigator">
-              <img src={pi.image || "/placeholder.svg"} alt={pi.name} className="investigator-pic" />
-              <div className="investigator-details">
-                <h2>{pi.name}</h2>
-                <p>Principal Investigator</p>
-                <p>Associate Professor, Department of Computer Science</p>
-                <p>University of North Carolina at Charlotte</p>
-                {pi.email && (
-                  <p>
-                    Email: <a href={`mailto:${pi.email}`}>{pi.email}</a>
-                  </p>
-                )}
-                <p>
-                  <a href="https://scholar.google.com/citations?user=0buJlAUAAAAJ&hl=en">Google Scholar</a>
-                </p>
-              </div>
-            </section>
-          )}
+          <section className="principal-investigator">
+            <img src={pi.image || "/placeholder.svg"} alt={pi.name} className="investigator-pic" />
+            <div className="investigator-details">
+              <h2>{pi.name}</h2>
+              <p>{pi.role}</p>
+              <p>Associate Professor, Department of Computer Science</p>
+              <p>University of North Carolina at Charlotte</p>
+              <p>
+                Email: <a href={`mailto:${pi.email}`}>{pi.email}</a>
+              </p>
+              <p>
+                <a href="https://scholar.google.com/citations?user=0buJlAUAAAAJ&hl=en">Google Scholar</a>
+              </p>
+            </div>
+          </section>
 
-          <section className="section">
+          <section>
             <h2 className="section-title">Current PhD Students</h2>
             <div className="students-grid">
-              {phdStudents.map((person) => (
-                <div key={person.id} className="student">
-                  <img src={person.image || "/placeholder.svg"} alt={person.name} className="student-pic" />
-                  <h3>{person.name}</h3>
-                  <p>{person.role}</p>
-                  {person.topic && <p className="student-topic">{person.topic}</p>}
+              {phdStudents.map((student, index) => (
+                <div key={index} className="student">
+                  <img src={student.image || "/placeholder.svg"} alt={student.name} className="student-pic" />
+                  <h3>{student.name}</h3>
+                  <p>PhD Student</p>
+                  <p>{student.topic}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="section">
+          <section>
             <h2 className="section-title">Current MS Students</h2>
             <div className="students-grid">
-              {msStudents.map((person) => (
-                <div key={person.id} className="student">
-                  <img src={person.image || "/placeholder.svg"} alt={person.name} className="student-pic" />
-                  <h3>{person.name}</h3>
-                  <p>{person.role}</p>
-                  {person.topic && <p className="student-topic">{person.topic}</p>}
+              {msStudents.map((student, index) => (
+                <div key={index} className="student">
+                  <img src={student.image || "/placeholder.svg"} alt={student.name} className="student-pic" />
+                  <h3>{student.name}</h3>
+                  <p>MS Student</p>
+                  <p>{student.topic}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="section">
+          <section>
             <h2 className="section-title">Alumni</h2>
             <div className="students-grid">
-              {alumni.map((person) => (
-                <div key={person.id} className="student">
-                  <img src={person.image || "/placeholder.svg"} alt={person.name} className="student-pic" />
-                  <h3>{person.name}</h3>
-                  <p>{person.role}</p>
-                  {person.topic && <p className="student-topic">{person.topic}</p>}
+              {alumni.map((student, index) => (
+                <div key={index} className="student">
+                  <img src={student.image || "/placeholder.svg"} alt={student.name} className="student-pic" />
+                  <h3>{student.name}</h3>
+                  <p>{student.topic}</p>
                 </div>
               ))}
             </div>
