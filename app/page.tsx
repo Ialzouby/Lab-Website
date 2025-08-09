@@ -20,6 +20,9 @@ export default function Home() {
         if (response.ok) {
           const data = await response.json()
           setNews(Array.isArray(data) ? data : [])
+        } else {
+          // If JSON file doesn't exist, use fallback data
+          setNews([])
         }
       } catch (error) {
         console.error("Error loading news:", error)
