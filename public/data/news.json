@@ -1,0 +1,32 @@
+[
+  {
+    "id": "news1",
+    "date": "2024-12-01",
+    "content": "Best student paper runner-up, IEEE SCC, San Francisco"
+  },
+  {
+    "id": "news2",
+    "date": "2024-11-15",
+    "content": "John A. See Innovation Award"
+  },
+  {
+    "id": "news3",
+    "date": "2024-10-20",
+    "content": "TPC Highest Ranked Paper of IEEE DySPAN, IEEE Communication Society, Germany"
+  },
+  {
+    "id": "news4",
+    "date": "2024-09-10",
+    "content": "BWN Lab Researcher of the Year Award, for his outstanding research achievements throughout the year."
+  },
+  {
+    "id": "news5",
+    "date": "2024-08-05",
+    "content": "Fellow of the School of Graduate Studies in recognition of his outstanding academic achievement throughout a graduate programme, Memorial University of Newfoundland, 2008"
+  },
+  {
+    "id": "news6",
+    "date": "2024-07-12",
+    "content": "IEEE Travel Grant for 2007 International Conference on Communications"
+  }
+]

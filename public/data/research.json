@@ -1,0 +1,26 @@
+[
+  {
+    "id": "research1",
+    "title": "Autonomous Underwater Vehicle Networks",
+    "summary": "Developing advanced communication protocols for underwater autonomous vehicle swarms using acoustic and magnetic induction technologies.",
+    "image": "/assets/images/bamm.gif",
+    "tags": ["underwater", "autonomous vehicles", "communication"],
+    "link": "https://example.com/research1"
+  },
+  {
+    "id": "research2",
+    "title": "Federated Learning for IoT",
+    "summary": "Implementing decentralized machine learning algorithms for Internet of Things devices while preserving privacy and reducing bandwidth usage.",
+    "image": "/assets/images/dha-fl.png",
+    "tags": ["federated learning", "IoT", "privacy"],
+    "link": "https://example.com/research2"
+  },
+  {
+    "id": "research3",
+    "title": "mmWave Network Security",
+    "summary": "Investigating security vulnerabilities and developing countermeasures for millimeter wave wireless networks in 5G and beyond systems.",
+    "image": "/assets/images/mmm.gif",
+    "tags": ["mmWave", "security", "5G"],
+    "link": "https://example.com/research3"
+  }
+]

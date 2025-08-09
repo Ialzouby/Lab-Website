@@ -1,0 +1,192 @@
+[
+  {
+    "id": "pi1",
+    "name": "Dr. Pu Wang",
+    "role": "PI",
+    "topic": "Computer Vision, Machine Learning, Wireless Communications",
+    "email": "pu.wang@uncc.edu",
+    "image": "/assets/images/puwang.jpg",
+    "notes": "Principal Investigator",
+    "status": "active"
+  },
+  {
+    "id": "phd1",
+    "name": "Prabhu Kaliamoorthi",
+    "role": "PhD Student",
+    "topic": "Computer Vision and Machine Learning",
+    "email": "",
+    "image": "/assets/images/prabhu.jpg",
+    "notes": "PhD Student",
+    "status": "active"
+  },
+  {
+    "id": "phd2",
+    "name": "Akarsh Pokkunuru",
+    "role": "PhD Student",
+    "topic": "Wireless Networks and IoT",
+    "email": "",
+    "image": "/assets/images/akarsh.jpg",
+    "notes": "PhD Student",
+    "status": "active"
+  },
+  {
+    "id": "phd3",
+    "name": "Ahmad Wisam Mustapha",
+    "role": "PhD Student",
+    "topic": "Machine Learning and Signal Processing",
+    "email": "",
+    "image": "/assets/images/ahmad.jpg",
+    "notes": "PhD Student",
+    "status": "active"
+  },
+  {
+    "id": "phd4",
+    "name": "Ekkasit Pinyoanuntapong",
+    "role": "PhD Student",
+    "topic": "Computer Vision and Human Motion Analysis",
+    "email": "",
+    "image": "/assets/images/pinyarash.jpg",
+    "notes": "PhD Student",
+    "status": "active"
+  },
+  {
+    "id": "phd5",
+    "name": "Yagna Patel",
+    "role": "PhD Student",
+    "topic": "Federated Learning and Edge Computing",
+    "email": "",
+    "image": "/assets/images/yagna.jpg",
+    "notes": "PhD Student",
+    "status": "active"
+  },
+  {
+    "id": "phd6",
+    "name": "Kalvik Jakkala",
+    "role": "PhD Student",
+    "topic": "mmWave Communications and Sensing",
+    "email": "",
+    "image": "/assets/images/kalvik.jpg",
+    "notes": "PhD Student",
+    "status": "active"
+  },
+  {
+    "id": "ms1",
+    "name": "Austin Hester",
+    "role": "MS Student",
+    "topic": "Machine Learning Applications",
+    "email": "",
+    "image": "/assets/images/austin.jpg",
+    "notes": "MS Student",
+    "status": "active"
+  },
+  {
+    "id": "ms2",
+    "name": "Varun Chopra",
+    "role": "MS Student",
+    "topic": "Computer Vision",
+    "email": "",
+    "image": "/assets/images/varun.jpg",
+    "notes": "MS Student",
+    "status": "active"
+  },
+  {
+    "id": "ms3",
+    "name": "Assad Ali",
+    "role": "MS Student",
+    "topic": "Wireless Communications",
+    "email": "",
+    "image": "/assets/images/assad.jpg",
+    "notes": "MS Student",
+    "status": "active"
+  },
+  {
+    "id": "ms4",
+    "name": "Fahad Alrasheed",
+    "role": "MS Student",
+    "topic": "Network Security",
+    "email": "",
+    "image": "/assets/images/fahad.jpg",
+    "notes": "MS Student",
+    "status": "active"
+  },
+  {
+    "id": "ms5",
+    "name": "Samuel Twumasi",
+    "role": "MS Student",
+    "topic": "IoT and Edge Computing",
+    "email": "",
+    "image": "/assets/images/samuel.jpg",
+    "notes": "MS Student",
+    "status": "active"
+  },
+  {
+    "id": "alumni1",
+    "name": "Abignan Kesavan",
+    "role": "Alumni",
+    "topic": "Former PhD Student",
+    "email": "",
+    "image": "/assets/images/abignan.jpg",
+    "notes": "Former PhD Student",
+    "status": "alumni"
+  },
+  {
+    "id": "alumni2",
+    "name": "Ayman Rahman",
+    "role": "Alumni",
+    "topic": "Former MS Student",
+    "email": "",
+    "image": "/assets/images/ayman.jpg",
+    "notes": "Former MS Student",
+    "status": "alumni"
+  },
+  {
+    "id": "alumni3",
+    "name": "Avinash Bhat",
+    "role": "Alumni",
+    "topic": "Former MS Student",
+    "email": "",
+    "image": "/assets/images/avinash.jpg",
+    "notes": "Former MS Student",
+    "status": "alumni"
+  },
+  {
+    "id": "alumni4",
+    "name": "Sultan Alshamrani",
+    "role": "Alumni",
+    "topic": "Former PhD Student",
+    "email": "",
+    "image": "/assets/images/sultan.jpg",
+    "notes": "Former PhD Student",
+    "status": "alumni"
+  },
+  {
+    "id": "alumni5",
+    "name": "Vijaya Yajnanarayana",
+    "role": "Alumni",
+    "topic": "Former Postdoc",
+    "email": "",
+    "image": "/assets/images/vijaya.jpg",
+    "notes": "Former Postdoc",
+    "status": "alumni"
+  },
+  {
+    "id": "alumni6",
+    "name": "Arun Singh",
+    "role": "Alumni",
+    "topic": "Former PhD Student",
+    "email": "",
+    "image": "/assets/images/Arunsingh.jpg",
+    "notes": "Former PhD Student",
+    "status": "alumni"
+  },
+  {
+    "id": "alumni7",
+    "name": "Bezabih Molla",
+    "role": "Alumni",
+    "topic": "Former PhD Student",
+    "email": "",
+    "image": "/assets/images/bezabih.jpg",
+    "notes": "Former PhD Student",
+    "status": "alumni"
+  }
+]
