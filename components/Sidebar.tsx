@@ -21,11 +21,13 @@ export default function Sidebar() {
       <div className="hamburger" onClick={toggleSidebar}>
         ☰
       </div>
-      <aside className={`sidebar-container ${isOpen ? "open" : ""}`}>
-        <h2>Dr. Wang</h2>
+      <aside className={`sidebar ${isOpen ? "open" : ""}`}>
+        <div className="sidebar-header">
+          <h2>Dr. Wang</h2>
+        </div>
         <nav>
           <div className="section">
-            <ul>
+            <ul className="sidebar-nav">
               <li>
                 <Link href="/" className={isActive("/")}>
                   Home
@@ -50,7 +52,7 @@ export default function Sidebar() {
           </div>
           <div className="section">
             <h3>Research</h3>
-            <ul>
+            <ul className="sidebar-nav">
               <li>
                 <Link href="/publications" className={isActive("/publications")}>
                   Publication
@@ -70,7 +72,7 @@ export default function Sidebar() {
           </div>
           <div className="section">
             <h3>Teaching & Service</h3>
-            <ul>
+            <ul className="sidebar-nav">
               <li>
                 <Link href="/teaching" className={isActive("/teaching")}>
                   Teaching

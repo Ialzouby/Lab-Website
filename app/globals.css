@@ -171,27 +171,49 @@
   padding-bottom: 5px;
 }
 
-.legacy-content .sidebar-container nav ul {
-  list-style-type: none;
-  padding-left: 0;
+/* Sidebar Styles */
+.legacy-content .sidebar {
+  width: 250px;
+  background-color: #eaeaea;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  height: 110vh;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.legacy-content .sidebar-container nav ul li {
+.legacy-content .sidebar-header h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.legacy-content .sidebar-nav {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.legacy-content .sidebar-nav li {
   margin-bottom: 10px;
 }
 
-.legacy-content .sidebar-container nav ul li a {
+.legacy-content .sidebar-nav li a {
   text-decoration: none;
   color: #0056b3;
   font-weight: bold;
   transition: color 0.3s;
+  display: block;
+  padding: 5px 0;
 }
 
-.legacy-content .sidebar-container nav ul li a:hover {
+.legacy-content .sidebar-nav li a:hover {
   color: #0073e6;
 }
 
-.legacy-content .sidebar-container nav ul li a.active {
+.legacy-content .sidebar-nav li a.active {
   color: black;
 }
 
@@ -323,26 +345,6 @@
 
 .legacy-content .investigator-details a:hover {
   text-decoration: underline;
-}
-
-.legacy-content .sidebar-container {
-  width: 250px;
-  background-color: #eaeaea;
-  padding: 20px;
-  border-right: 1px solid #ddd;
-  height: 110vh;
-  box-sizing: border-box;
-  position: fixed;
-}
-
-.legacy-content .hamburger {
-  font-size: 30px;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 1100;
-  display: none;
 }
 
 /* Publications styles */
@@ -543,18 +545,29 @@
   margin: 0;
 }
 
+/* Hamburger menu for mobile */
+.legacy-content .hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1100;
+  display: none;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .legacy-content .content {
     margin-left: 0px;
   }
 
-  .legacy-content .sidebar-container {
+  .legacy-content .sidebar {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
 
-  .legacy-content .sidebar-container.open {
+  .legacy-content .sidebar.open {
     transform: translateX(0);
   }
 
